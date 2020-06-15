@@ -14,8 +14,8 @@
 
       <h1 class="title">ToDo's</h1>
 
-      <form>
-        <input type="text" id="new-item">
+      <form v-on:submit.prevent="addNewTask">
+        <input type="text" id="new-item" v-model="newTask">
         <input type="submit" value="Add Task">
       </form>
 
