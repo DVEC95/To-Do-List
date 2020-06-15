@@ -17,6 +17,13 @@
       <form v-on:submit.prevent="addNewTask">
         <input type="text" id="new-item" v-model="newTask">
         <input type="submit" value="Add Task">
+
+        <label for="high-priority">High Priority</label>
+        <input type="radio" name="priority" id="high-priority" v-bind:value="true" v-model="priority">
+
+        <label for="low-priority">Low Priority</label>
+        <input type="radio" name="priority" id="low-priority" v-bind:value="false" v-model="priority">
+
       </form>
 
       <ul>
