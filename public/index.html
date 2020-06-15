@@ -27,8 +27,13 @@
       </form>
 
       <ul>
-        <li v-for="task in tasks">
+        <li v-for="task in tasks" v-bind:class="task.highPriority ? 'high-priority' : 'low-priority'">
+          <br>
           <span>{{ task.name }}</span>
+          <br>
+          <span v-if="task.highPriority">High Priority</span>
+          <span v-if="!task.highPriority">Low Priority</span>
+          <br>
         </li>
       </ul>
 
