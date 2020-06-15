@@ -4,10 +4,11 @@ document.addEventListener("DOMContentLoaded", () => {
   new Vue({
     el: "#app",
     data: {
-
-    },
-    methods: {
-
+      tasks: [
+        {name: "Buy shopping", highPriority: true},
+        {name: "Clean bathroom", highPriority: false},
+        {name: "Car's MOT", highPriority: true}
+      ]
     }
   });
 });
