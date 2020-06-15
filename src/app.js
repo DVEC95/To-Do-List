@@ -8,7 +8,17 @@ document.addEventListener("DOMContentLoaded", () => {
         {name: "Buy shopping", highPriority: true},
         {name: "Clean bathroom", highPriority: false},
         {name: "Car's MOT", highPriority: true}
-      ]
+      ],
+      newTask: ""
+    },
+    methods: {
+      addNewTask : function(){
+        this.tasks.push({
+          name: this.newTask,
+          highPriority: false
+        });
+        this.newTask = "";
+      }
     }
   });
 });
